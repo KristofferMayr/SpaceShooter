@@ -5,8 +5,8 @@ using UnityEngine;
 public class SpaceShip : MonoBehaviour
 {
     public float movmentSpeed;
-    float speedX, speedY;
-    Rigidbody2D rb;
+    private float speedX, speedY;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +20,24 @@ public class SpaceShip : MonoBehaviour
         speedX = Input.GetAxisRaw("Horizontal") * movmentSpeed;
         speedY = Input.GetAxisRaw("Vertical") * movmentSpeed;
         rb.velocity = new Vector2(speedX, speedY);
+        
+        // Player Boundries
+	    if (transform.position.y < -13){
+            transform.position = new Vector3(transform.position.x, -13f, 0);
+        }
+        else if (transform.position.y > 13f){
+            transform.position = new Vector3(transform.position.x, 13f, 0);
+        }
+
+        if (transform.position.x > 31.58f){
+            transform.position = new Vector3(31.58f, transform.position.y, 0);
+        }
+        else if (transform.position.x < -31.58f){
+            transform.position = new Vector3(-31.58f, transform.position.y, 0);
+        }
+    }
+
+    private void shoot(){
+        
     }
 }
