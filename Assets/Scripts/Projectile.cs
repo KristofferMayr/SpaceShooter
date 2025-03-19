@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
     {
         transform.Translate(Vector3.down * speed * Time.deltaTime);
         // Zerstöre das Projektil, wenn es den Bildschirm verlässt
-        if (transform.position.x > 10) // 10 ist ein Beispielwert, passe ihn an deine Bildschirmgröße an
+        if (transform.position.x > 10)
         {
             Destroy(gameObject);
         }
