@@ -1,7 +1,61 @@
 fileFormatVersion: 2
-guid: d240bffe73b78114dbd31f26d67fbe6f
+guid: 1bd6c74c058d5f143a391104c445e845
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: aster-huge-1
+  - first:
+      213: 21300002
+    second: aster-huge-2
+  - first:
+      213: 21300004
+    second: aster-huge-3
+  - first:
+      213: 21300006
+    second: aster-big-1
+  - first:
+      213: 21300008
+    second: aster-big-2
+  - first:
+      213: 21300010
+    second: aster-big-3
+  - first:
+      213: 21300012
+    second: aster-big-4
+  - first:
+      213: 21300014
+    second: aster-med-1
+  - first:
+      213: 21300016
+    second: aster-med-2
+  - first:
+      213: 21300018
+    second: aster-med-3
+  - first:
+      213: 21300020
+    second: aster-med-4
+  - first:
+      213: 21300022
+    second: aster-med-5
+  - first:
+      213: 21300024
+    second: aster-small-1
+  - first:
+      213: 21300026
+    second: aster-small-2
+  - first:
+      213: 21300028
+    second: aster-small-3
+  - first:
+      213: 21300030
+    second: aster-small-4
+  - first:
+      213: 21300032
+    second: aster-small-5
+  - first:
+      213: 21300034
+    second: aster-small-6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -34,7 +88,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +102,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,47 +117,73 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spaceshipSpriteSheet_0
+      name: aster-huge-1
       rect:
         serializedVersion: 2
-        x: 10
-        y: 295
-        width: 80
-        height: 80
+        x: 8
+        y: 259
+        width: 155
+        height: 144
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +191,293 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42a44c6ef5db42b41a0132ca1ff972f6
-      internalID: 1794111911
+      spriteID: 857afab04c492fe4f8a33dad42bbdcab
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceshipSpriteSheet_1
+      name: aster-huge-2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 263
+        width: 151
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95471bcab3b035649988b8dcd7b1308b
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-huge-3
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 253
+        width: 152
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97531bc48911b904fb5c42613d00f8ff
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-big-1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 107
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd35c73ccbd0ec49bee0f75700c06d0
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-big-2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 144
+        width: 98
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdb203ac8275174aacfed58582461a8
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-big-3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 147
+        width: 90
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6370cc3655ad540aeb1fd41dd9f3c0
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-big-4
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 137
+        width: 93
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfb56944e1dbdb41b6868536365653b
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-med-1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 64
+        width: 70
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410a35b86a5e0084cab501cb12c1b40c
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-med-2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 63
+        width: 71
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45fae02393401584fbab2884899e64a7
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-med-3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 61
+        width: 67
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cca314af8c11354bbcc46a79c14b079
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-med-4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 60
+        width: 64
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ecf1c30a158c341a01579307cd3a66
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-med-5
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 60
+        width: 59
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10c3c7d6edf56f4b93593e8ba07e0f9
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-small-1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 5
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bcd1603e27081048a8e4cb96fb84948
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-small-2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cd8867c8d310c46acf1cf867163949
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aster-small-3
       rect:
         serializedVersion: 2
         x: 110
-        y: 295
-        width: 80
-        height: 80
+        y: 1
+        width: 26
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +485,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d221ec6be91d6740b2394fc23742092
-      internalID: -1155292353
+      spriteID: f905b37584492a44ab5b225076d5e17d
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceshipSpriteSheet_2
+      name: aster-small-4
       rect:
         serializedVersion: 2
-        x: 210
-        y: 295
-        width: 80
-        height: 80
+        x: 148
+        y: 4
+        width: 22
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +506,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45e64335e9e4dbc47bd3d0f3cedd9797
-      internalID: 1659729165
+      spriteID: b5939e6deca863e41b9d00cb2cedf218
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceshipSpriteSheet_3
+      name: aster-small-5
       rect:
         serializedVersion: 2
-        x: 310
-        y: 295
-        width: 80
-        height: 80
+        x: 184
+        y: 4
+        width: 28
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,407 +527,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d63311800a537714990ad2380bf8ccc1
-      internalID: 461982636
+      spriteID: 275777cc633336648b74a4c999310f38
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spaceshipSpriteSheet_4
+      name: aster-small-6
       rect:
         serializedVersion: 2
-        x: 410
-        y: 295
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67622610da6bdcf4bbf568ffd4bce549
-      internalID: -763197231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 510
-        y: 295
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05e75d48c5e4d0c418d35717909c0e7c
-      internalID: -988486352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_6
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 295
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02005d527ea342749a4b75f24256b527
-      internalID: 601009198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_7
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 195
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49bdab4e92dcb254b9926e9ead05ba89
-      internalID: -1288643216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_8
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 195
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 718ea066eb001bb4a845aca404874519
-      internalID: -1442991969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_9
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 195
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3a3d07890f64654f8f7ab570d041936
-      internalID: -206705236
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_10
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 195
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 895168c2c6e8d6747b544d989a1b7ca7
-      internalID: -258233090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_11
-      rect:
-        serializedVersion: 2
-        x: 410
-        y: 195
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff0c17ade7aa1c14aac03f02f96d826c
-      internalID: -1207360840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_12
-      rect:
-        serializedVersion: 2
-        x: 510
-        y: 195
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1051cd6d2ed04440a02da229142c38e
-      internalID: 1498263056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_13
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 195
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b32eceb06f064be4f93a67c8f5d3854d
-      internalID: -199662147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_14
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 95
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c922e7ed51cb446458a3ab52fc8dc136
-      internalID: -396198929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_15
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 95
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b9057734d5c1c442bdf8e01a970afd3
-      internalID: -319947679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_16
-      rect:
-        serializedVersion: 2
-        x: 10
+        x: 222
         y: 0
-        width: 80
-        height: 80
+        width: 25
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 752e63a9361386f40b649c395851b660
-      internalID: 1288956157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_17
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c93946261f10aee488f045202de7f964
-      internalID: -148333585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_18
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1755cb92f4e25a14d96dcafa2a908b1f
-      internalID: 1380687689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_19
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e8eb2c19cac0dc4d86048eb3d2a9d08
-      internalID: -1237094015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_20
-      rect:
-        serializedVersion: 2
-        x: 410
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e57b11e9f1863846a2675f247b13478
-      internalID: -1863609223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_21
-      rect:
-        serializedVersion: 2
-        x: 510
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0ae2b61e763a874b9c3cabe2c8bb593
-      internalID: -402380753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spaceshipSpriteSheet_22
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42e77d68da5f3b84f9d9bdb247a06df4
-      internalID: -295479930
+      spriteID: 73efffa36fd655c41bd51afaf1c08a93
+      internalID: 21300034
       vertices: []
       indices: 
       edges: []
@@ -582,7 +557,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 79ad27d5aaefade418139c523c53e89e
     internalID: 0
     vertices: []
     indices: 
@@ -590,29 +565,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spaceshipSpriteSheet_0: 1794111911
-      spaceshipSpriteSheet_1: -1155292353
-      spaceshipSpriteSheet_10: -258233090
-      spaceshipSpriteSheet_11: -1207360840
-      spaceshipSpriteSheet_12: 1498263056
-      spaceshipSpriteSheet_13: -199662147
-      spaceshipSpriteSheet_14: -396198929
-      spaceshipSpriteSheet_15: -319947679
-      spaceshipSpriteSheet_16: 1288956157
-      spaceshipSpriteSheet_17: -148333585
-      spaceshipSpriteSheet_18: 1380687689
-      spaceshipSpriteSheet_19: -1237094015
-      spaceshipSpriteSheet_2: 1659729165
-      spaceshipSpriteSheet_20: -1863609223
-      spaceshipSpriteSheet_21: -402380753
-      spaceshipSpriteSheet_22: -295479930
-      spaceshipSpriteSheet_3: 461982636
-      spaceshipSpriteSheet_4: -763197231
-      spaceshipSpriteSheet_5: -988486352
-      spaceshipSpriteSheet_6: 601009198
-      spaceshipSpriteSheet_7: -1288643216
-      spaceshipSpriteSheet_8: -1442991969
-      spaceshipSpriteSheet_9: -206705236
+      aster-big-1: 21300006
+      aster-big-2: 21300008
+      aster-big-3: 21300010
+      aster-big-4: 21300012
+      aster-huge-1: 21300000
+      aster-huge-2: 21300002
+      aster-huge-3: 21300004
+      aster-med-1: 21300014
+      aster-med-2: 21300016
+      aster-med-3: 21300018
+      aster-med-4: 21300020
+      aster-med-5: 21300022
+      aster-small-1: 21300024
+      aster-small-2: 21300026
+      aster-small-3: 21300028
+      aster-small-4: 21300030
+      aster-small-5: 21300032
+      aster-small-6: 21300034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
