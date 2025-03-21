@@ -13,6 +13,9 @@ public class SpaceShip : MonoBehaviour
     private bool isInvincible = false;
     public float invincibilityDuration = 2.0f; // Dauer der Unsterblichkeit nach einem Treffer
 
+    // Animation
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +80,16 @@ public class SpaceShip : MonoBehaviour
         Debug.Log("Spaceship destroyed!");
 
         //TODO: Game-Over-Logik implementieren
+        animator.SetBool("dead", true);
+        StartCoroutine(WaitForAnimation());
+    }
+
+    private IEnumerator WaitForAnimation()
+    {
+        // Warte für eine bestimmte Zeit, um die Animation abzuspielen
+        yield return new WaitForSeconds(1.0f); // Passen Sie die Zeit an die Länge der Animation an
+        
+        // Zerstöre das Spielobjekt nach der Animation
         Destroy(gameObject);
     }
 
