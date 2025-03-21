@@ -9,7 +9,7 @@ public class SpaceShip : MonoBehaviour
 
     // Lebenssystem
     public int maxHealth = 3;
-    private int currentHealth;
+    public int currentHealth;
     private bool isInvincible = false;
     public float invincibilityDuration = 2.0f; // Dauer der Unsterblichkeit nach einem Treffer
 
@@ -61,7 +61,7 @@ public class SpaceShip : MonoBehaviour
         // Aktiviere Unsterblichkeit für die angegebene Dauer
         StartCoroutine(InvincibilityCooldown());
 
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
             Die();
         }
