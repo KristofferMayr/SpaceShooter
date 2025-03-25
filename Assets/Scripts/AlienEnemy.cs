@@ -9,6 +9,8 @@ public class AlienEnemy : MonoBehaviour
     public float damageInterval = 2f; // Zeitabstand zwischen den Schadenszufügungen
     public int damageAmount = 1; // Menge des Schadens, der zugefügt wird
     private float nextDamageTime; // Zeitpunkt, zu dem der nächste Schaden zugefügt wird
+    public int scoreValue = 1; // Punkte pro getötetem Gegner
+    private bool wasScored = false; // Flag, ob Punkte bereits vergeben wurden
     public GameObject[] powerUpPrefabs;
 
     void Start()
@@ -60,6 +62,19 @@ public class AlienEnemy : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
+    void Die()
+    {
+
+        if (!wasScored)
+        {
+            ScoreManager.Instance.AddScore(scoreValue);
+            wasScored = true; // Verhindert weitere Punktevergabe
+        }
+        
+        // Gegner zerstören
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Trigger entered with: " + collision.name);
@@ -68,7 +83,7 @@ public class AlienEnemy : MonoBehaviour
         {
             Debug.Log("Projectile hit the enemy!");
             Destroy(collision.gameObject);
-            Destroy(gameObject);
+            Die();
 
             /*
             // Power-Up Spawn Chance (Random Power-Up aus dem Array)
