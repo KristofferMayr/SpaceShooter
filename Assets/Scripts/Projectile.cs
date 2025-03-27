@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
         // Zerstöre das Projektil, wenn es den Bildschirm verlässt
         if (transform.position.x > 10)
         {

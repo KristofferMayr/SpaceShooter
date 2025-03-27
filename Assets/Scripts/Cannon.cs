@@ -17,7 +17,7 @@ public class Cannon : MonoBehaviour
         // Fire Projectile
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, 90));
+            Instantiate(projectilePrefab, transform.position, Quaternion.Euler(0, 0, 0));
         }
     }
 }
