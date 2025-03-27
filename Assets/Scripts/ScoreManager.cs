@@ -4,7 +4,7 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
-    public TextMeshProUGUI scoreText;
+    [SerializeField] public TextMeshProUGUI scoreText;
     private int currentScore = 0;
 
     void Awake()
@@ -13,6 +13,7 @@ public class ScoreManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            InitializeScore(); // Score beim ersten Laden initialisieren
         }
         else
         {
@@ -20,21 +21,35 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    private void InitializeScore()
+    {
+        // Lade den Score beim Start
+        currentScore = SaveSystem.LoadScore(out _);
+        UpdateScoreDisplay(currentScore); // UI sofort aktualisieren
+    }
+
     public void AddScore(int points)
     {
         currentScore += points;
-        UpdateScoreDisplay();
+        SaveSystem.SaveScore(currentScore, "Player");
+        UpdateScoreDisplay(currentScore); // UI nach jeder Änderung aktualisieren
     }
 
-    void UpdateScoreDisplay()
+    public void UpdateScoreDisplay(int scoreToDisplay)
     {
-        scoreText.text = $"SCORE: <color=#FFD700>{currentScore}</color>"; // Goldener Text mit Formatierung
+        if (scoreText != null)
+        {
+            scoreText.text = $"SCORE: <color=#FFD700>{scoreToDisplay}</color>";
+        }
+        else
+        {
+            Debug.LogWarning("ScoreText-Referenz fehlt!");
+        }
     }
 
-    // Highscore-Logik (optional)
-    public void SaveHighscore()
+    // Für externe Zugriffe (z.B. GameManager)
+    public int GetCurrentScore()
     {
-        PlayerPrefs.SetInt("Highscore", currentScore);
-        PlayerPrefs.Save();
+        return currentScore;
     }
 }
