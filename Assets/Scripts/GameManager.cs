@@ -17,19 +17,7 @@ public class GameManager : MonoBehaviour
     private void LoadGameData()
     {
         currentScore = SaveSystem.LoadScore(out _);
-        UpdateScoreUI(); // UI sofort aktualisieren
     }
 
     // Aktualisiert die UI über den ScoreManager
-    private void UpdateScoreUI()
-    {
-        if (scoreManager != null)
-        {
-            scoreManager.UpdateScoreDisplay(currentScore);
-        }
-        else
-        {
-            Debug.LogWarning("ScoreManager nicht gefunden!");
-        }
-    }
 }

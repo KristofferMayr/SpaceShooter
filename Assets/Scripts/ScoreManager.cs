@@ -4,8 +4,13 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
-    [SerializeField] public TextMeshProUGUI scoreText;
+    
+    [Header("UI Reference")]
+    [SerializeField] private TextMeshProUGUI scoreText; // Einziges Textfeld für beide Anzeigen
+
     private int currentScore = 0;
+    private int highscore = 0;
+    private string playerName = "Player";
 
     void Awake()
     {
@@ -13,7 +18,8 @@ public class ScoreManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            InitializeScore(); // Score beim ersten Laden initialisieren
+            LoadHighscore();
+            UpdateScoreDisplay();
         }
         else
         {
@@ -21,35 +27,48 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    private void InitializeScore()
+    private void LoadHighscore()
     {
-        // Lade den Score beim Start
-        currentScore = SaveSystem.LoadScore(out _);
-        UpdateScoreDisplay(currentScore); // UI sofort aktualisieren
+        highscore = SaveSystem.LoadScore(out playerName);
+        currentScore = 0;
+        UpdateScoreDisplay();
     }
 
     public void AddScore(int points)
     {
         currentScore += points;
-        SaveSystem.SaveScore(currentScore, "Player");
-        UpdateScoreDisplay(currentScore); // UI nach jeder Änderung aktualisieren
+        
+        if (currentScore > highscore)
+        {
+            highscore = currentScore;
+            SaveSystem.SaveScore(highscore, playerName);
+        }
+        
+        UpdateScoreDisplay();
     }
 
-    public void UpdateScoreDisplay(int scoreToDisplay)
+    private void UpdateScoreDisplay()
     {
         if (scoreText != null)
         {
-            scoreText.text = $"SCORE: <color=#FFD700>{scoreToDisplay}</color>";
-        }
-        else
-        {
-            Debug.LogWarning("ScoreText-Referenz fehlt!");
+            // Kombinierte Anzeige in einem Textfeld
+            scoreText.text = $"SCORE: <color=#FFD700>{currentScore}</color>\n" +
+                            $"BEST: <color=#FF00FF>{highscore}</color>";
         }
     }
 
-    // Für externe Zugriffe (z.B. GameManager)
-    public int GetCurrentScore()
+    public void ResetCurrentScore()
     {
-        return currentScore;
+        currentScore = 0;
+        UpdateScoreDisplay();
+    }
+
+    public void SetPlayerName(string newName)
+    {
+        playerName = newName;
+        if (currentScore >= highscore)
+        {
+            SaveSystem.SaveScore(highscore, playerName);
+        }
     }
 }
