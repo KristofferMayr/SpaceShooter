@@ -79,15 +79,23 @@ public class SpaceShip : MonoBehaviour
     {
         Debug.Log("Spaceship destroyed!");
 
-        //TODO: Game-Over-Logik implementieren
+        //TODO: Game-Over-Logik implementieren -> Restart, Level-Overview usw.
         animator.SetBool("dead", true);
         StartCoroutine(WaitForAnimation());
+
+        // Application Quit funktioniert nur im build deshalb: (# um während kompilierungszeit ausgwertet zu werden)
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false; //im editor
+        #else
+            Application.Quit(); //im build
+        #endif
     }
 
     private IEnumerator WaitForAnimation()
     {
+        Debug.Log("WAIT ANIMATION");
         // Warte für eine bestimmte Zeit, um die Animation abzuspielen
-        yield return new WaitForSeconds(1.0f); // Passen Sie die Zeit an die Länge der Animation an
+        yield return new WaitForSeconds(5.0f);
         
         // Zerstöre das Spielobjekt nach der Animation
         Destroy(gameObject);
