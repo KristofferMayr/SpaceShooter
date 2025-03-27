@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpaceShip : MonoBehaviour
 {
-    public float movmentSpeed; // Geschwindigkeit der Raumschiffbewegung
+    public float movmentSpeed = 5; // Geschwindigkeit der Raumschiffbewegung
     private float speedX, speedY;
     private Rigidbody2D rb;
 

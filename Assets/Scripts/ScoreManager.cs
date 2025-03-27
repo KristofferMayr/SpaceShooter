@@ -1,10 +1,10 @@
 using UnityEngine;
-using TMPro; // Wichtig für TextMeshPro
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
-    public TextMeshProUGUI scoreText; // TMP-Text statt normalem Text
+    public TextMeshProUGUI scoreText;
     private int currentScore = 0;
 
     void Awake()

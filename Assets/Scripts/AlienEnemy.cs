@@ -5,7 +5,7 @@ using UnityEngine;
 public class AlienEnemy : MonoBehaviour
 {
     public Transform player; // Referenz zum Spieler
-    public float moveSpeed = 3f; // Geschwindigkeit, mit der sich der Gegner bewegt
+    public float moveSpeed = 5f; // Geschwindigkeit, mit der sich der Gegner bewegt
     public float damageInterval = 2f; // Zeitabstand zwischen den Schadenszufügungen
     public int damageAmount = 1; // Menge des Schadens, der zugefügt wird
     private float nextDamageTime; // Zeitpunkt, zu dem der nächste Schaden zugefügt wird
