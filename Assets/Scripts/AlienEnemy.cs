@@ -85,13 +85,11 @@ public class AlienEnemy : MonoBehaviour
             Destroy(collision.gameObject);
             Die();
 
-            /*
             // Power-Up Spawn Chance (Random Power-Up aus dem Array)
             if(Random.Range(1, 11) == 10){
                 Vector3 spawnPosition = new Vector3(this.transform.position.x, this.transform.position.y, 0);
                 GameObject.Instantiate(powerUpPrefabs[Random.Range(0, powerUpPrefabs.Length)], spawnPosition, Quaternion.identity);
             }
-            */
         }
     }
 }

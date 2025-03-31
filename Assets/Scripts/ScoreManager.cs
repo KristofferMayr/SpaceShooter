@@ -1,13 +1,16 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
+    public static event Action<int> OnScoreChanged;
     
     [Header("UI Reference")]
     [SerializeField] private TextMeshProUGUI scoreText; // Einziges Textfeld für beide Anzeigen
-
+    private EnemySpawner enemySpawner;
+    private AsteroidSpawner asteroidSpawner;
     private int currentScore = 0;
     private int highscore = 0;
     private string playerName = "Player";
@@ -25,6 +28,8 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        enemySpawner = FindObjectOfType<EnemySpawner>();
+        asteroidSpawner = FindObjectOfType<AsteroidSpawner>();
     }
 
     private void LoadHighscore()
@@ -37,6 +42,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int points)
     {
         currentScore += points;
+        OnScoreChanged?.Invoke(currentScore);
         
         if (currentScore > highscore)
         {
@@ -45,6 +51,12 @@ public class ScoreManager : MonoBehaviour
         }
         
         UpdateScoreDisplay();
+        // Boss spawnen bei Score 100
+        if (currentScore == 100 && enemySpawner != null)
+        {
+            enemySpawner.SpawnBoss();
+            asteroidSpawner.spawnAsteroids = false;
+        }
     }
 
     private void UpdateScoreDisplay()

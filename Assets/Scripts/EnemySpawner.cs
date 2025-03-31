@@ -3,17 +3,19 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject[] enemyPrefabs; // Array von Enemy-Prefabs
-    public float minSpawnDelay = 1.0f; // Minimale Wartezeit zwischen Spawns
-    public float maxSpawnDelay = 4.0f; // Maximale Wartezeit zwischen Spawns
-    public float minYSpawn = -3.0f; // Minimale Y-Position
-    public float maxYSpawn = 3.0f; // Maximale Y-Position
-    public float minXSpawn = 10.0f; // Minimale X-Position
-    public float maxXSpawn = 15.0f; // Maximale X-Position
-    public float destroyXPosition = -11.0f; // X-Position, bei der Gegner zerstört werden
-    public float difficultyRampRate = 0.1f; // Wie schnell das Spiel schwieriger wird
+    public GameObject[] enemyPrefabs;
+    public GameObject bossPrefab;
+    public float minSpawnDelay = 1.0f;
+    public float maxSpawnDelay = 4.0f;
+    public float minYSpawn = -3.0f;
+    public float maxYSpawn = 3.0f;
+    public float minXSpawn = 10.0f;
+    public float maxXSpawn = 15.0f;
+    public float destroyXPosition = -11.0f;
+    public float difficultyRampRate = 0.1f;
 
-    private float currentMaxDelay; // Aktuell maximale Verzögerungs
+    private float currentMaxDelay;
+    private bool bossSpawned = false; // Damit der Boss nur einmal erscheint
 
     void Start()
     {
@@ -25,13 +27,11 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            // Zufällige Wartezeit mit zunehmendem Schwierigkeitsgrad
             float randomDelay = Random.Range(minSpawnDelay, currentMaxDelay);
             yield return new WaitForSeconds(randomDelay);
 
             SpawnSingleEnemy();
 
-            // Schwierigkeit langsam erhöhen
             currentMaxDelay = Mathf.Clamp(
                 currentMaxDelay - difficultyRampRate * Time.deltaTime, 
                 minSpawnDelay, 
@@ -42,22 +42,21 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnSingleEnemy()
     {
-        if (enemyPrefabs == null || enemyPrefabs.Length == 0)
-        {
-            Debug.LogWarning("Keine Enemy-Prefabs im Array zugewiesen!");
-            return;
-        }
+        if (enemyPrefabs == null || enemyPrefabs.Length == 0) return;
 
-        // Wähle zufälliges Prefab
         GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-
-        // Zufällige Position
         float spawnXPosition = Random.Range(minXSpawn, maxXSpawn);
         float spawnYPosition = Random.Range(minYSpawn, maxYSpawn);
 
-        // Spawne Gegner
-        Vector3 spawnPosition = new Vector3(spawnXPosition, spawnYPosition, 0);
-        Quaternion spawnRotation = Quaternion.Euler(0, 0, 270);
-        Instantiate(enemyPrefab, spawnPosition, spawnRotation);
+        Instantiate(enemyPrefab, new Vector3(spawnXPosition, spawnYPosition, 0), Quaternion.Euler(0, 0, 270));
+    }
+
+    public void SpawnBoss()
+    {
+        if (bossPrefab == null || bossSpawned) return;
+        
+        bossSpawned = true;
+        Instantiate(bossPrefab, new Vector3(12.14f, 0, 0), Quaternion.Euler(0, 0, -90));
+        Debug.Log("Boss Spawned");
     }
 }

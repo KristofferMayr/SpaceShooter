@@ -75,7 +75,7 @@ public class SpaceShip : MonoBehaviour
         isInvincible = false;
     }
 
-    private void Die()
+    public void Die()
     {
         Debug.Log("Spaceship destroyed!");
 

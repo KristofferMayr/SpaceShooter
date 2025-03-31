@@ -11,6 +11,7 @@ public class AsteroidSpawner : MonoBehaviour
     public float spawnXPosition = 11.0f; // X-Position für das Spawnen
     public float asteroidSpeed = 3.0f; // Geschwindigkeit der Asteroiden
     public float destroyXPosition = -11.0f; // X-Position, bei der Asteroiden zerstört werden
+    public bool spawnAsteroids = true;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class AsteroidSpawner : MonoBehaviour
 
     private IEnumerator SpawnAsteroids()
     {
-        while (true)
+        while (spawnAsteroids)
         {
             // Zufällige Wartezeit zwischen minSpawnDelay und maxSpawnDelay
             float randomDelay = Random.Range(minSpawnDelay, maxSpawnDelay);
