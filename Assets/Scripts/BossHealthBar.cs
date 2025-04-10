@@ -1,3 +1,6 @@
+/*
+Not yet used -> usage later in bossfight development
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

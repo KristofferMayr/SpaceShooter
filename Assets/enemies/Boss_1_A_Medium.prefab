@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
-  speed: 0.1
+  speed: 0.2
   scoreValue: 50
 --- !u!61 &2082160237376213888
 BoxCollider2D:
