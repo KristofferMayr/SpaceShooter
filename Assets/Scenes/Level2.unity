@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1507080755808801396, guid: 924fa6a5bdc58b84090427b4dbb8404e, type: 3}
+  fireDelay: 0.5
 --- !u!212 &349019193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1228,6 +1229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1507080755808801396, guid: 924fa6a5bdc58b84090427b4dbb8404e, type: 3}
+  fireDelay: 0.5
 --- !u!212 &1104818185
 SpriteRenderer:
   m_ObjectHideFlags: 0
