@@ -652,10 +652,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 678973758}
-  resumeButton: {fileID: 878975539}
-  optionsButton: {fileID: 0}
-  otherLevelButton: {fileID: 800346312}
-  quitButton: {fileID: 1042033776}
 --- !u!4 &336245177
 Transform:
   m_ObjectHideFlags: 0
