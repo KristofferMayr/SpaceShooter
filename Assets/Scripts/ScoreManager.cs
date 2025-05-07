@@ -19,6 +19,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (Instance == null)
         {
+            Debug.Log("Load SaveGame");
             Instance = this;
             DontDestroyOnLoad(gameObject);
             LoadHighscore();
@@ -63,9 +64,9 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
+            Debug.Log("Update Score Current: " + currentScore + " High: " + highscore);
             // Kombinierte Anzeige in einem Textfeld
-            scoreText.text = $"SCORE: <color=#FFD700>{currentScore}</color>\n" +
-                            $"BEST: <color=#FF00FF>{highscore}</color>";
+            scoreText.text = $"SCORE: <color=#FFD700>{currentScore}</color>\n" + $"BEST: <color=#FF00FF>{highscore}</color>";
         }
     }
 
