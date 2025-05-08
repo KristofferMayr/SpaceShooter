@@ -40,7 +40,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void SpawnSingleEnemy()
+    protected virtual void SpawnSingleEnemy()
     {
         if (enemyPrefabs == null || enemyPrefabs.Length == 0) return;
 

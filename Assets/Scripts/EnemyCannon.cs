@@ -17,7 +17,7 @@ public class EnemyCannon : MonoBehaviour
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         if (firePoint == null) firePoint = transform; // Fallback
     }
 
@@ -47,7 +47,7 @@ public class EnemyCannon : MonoBehaviour
         }
 
         // Effekte
-        if (muzzleFlash != null) muzzleFlash.Play();
-        if (shootSound != null) audioSource.PlayOneShot(shootSound);
+        //if (muzzleFlash != null) muzzleFlash.Play();
+        //if (shootSound != null) audioSource.PlayOneShot(shootSound);
     }
 }
