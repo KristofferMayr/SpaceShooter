@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -10,10 +11,29 @@ public static class SaveSystem
     [Serializable]
     private class SaveData
     {
-        public int highscore;
+        public List<int> levelIndexes = new List<int>();
+        public List<int> highscoreValues = new List<int>();
         public string playerName;
-
         public int highestUnlockedLevel = 1;
+
+        public Dictionary<int, int> ToDictionary()
+        {
+            var dictionary = new Dictionary<int, int>();
+            for (int i = 0; i < levelIndexes.Count; i++)
+            {
+                if (i < highscoreValues.Count) // Sicherstellen, dass der Index existiert
+                {
+                    dictionary[levelIndexes[i]] = highscoreValues[i];
+                }
+            }
+            return dictionary;
+        }
+
+        public void FromDictionary(Dictionary<int, int> dictionary)
+        {
+            levelIndexes = new List<int>(dictionary.Keys);
+            highscoreValues = new List<int>(dictionary.Values);
+        }
     }
 
     private static SaveData currentSave = null;
@@ -21,21 +41,37 @@ public static class SaveSystem
     // --------------------------
     // SCORE & NAME
     // --------------------------
-    public static void SaveScore(int score, string playerName)
+    public static void SaveScore(int levelIndex, int score, string playerName)
     {
-        LoadSaveFile(); // Bestehende Daten laden oder neuen Save erstellen
-
-        currentSave.highscore = score;
-        currentSave.playerName = playerName;
-
-        SaveToFile();
+        LoadSaveFile();
+        
+        // Konvertiere zu Dictionary für die Bearbeitung
+        var highscores = currentSave.ToDictionary();
+        
+        // Highscore aktualisieren wenn nötig
+        if (!highscores.ContainsKey(levelIndex) || score > highscores[levelIndex])
+        {
+            highscores[levelIndex] = score;
+            currentSave.FromDictionary(highscores);
+            currentSave.playerName = playerName;
+            SaveToFile();
+            Debug.Log($"Highscore für Level {levelIndex} gespeichert: {score}");
+        }
     }
 
-    public static int LoadScore(out string loadedPlayerName)
+    public static int LoadScore(int levelIndex, out string loadedPlayerName)
     {
         LoadSaveFile();
         loadedPlayerName = currentSave.playerName;
-        return currentSave.highscore;
+        
+        var highscores = currentSave.ToDictionary();
+        if (highscores.TryGetValue(levelIndex, out int score))
+        {
+            Debug.Log($"Highscore für Level {levelIndex} geladen: {score}");
+            return score;
+        }
+        Debug.Log($"Kein Highscore für Level {levelIndex} gefunden, gebe 0 zurück");
+        return 0;
     }
 
     // --------------------------
@@ -48,6 +84,7 @@ public static class SaveSystem
         {
             currentSave.highestUnlockedLevel = levelIndex;
             SaveToFile();
+            Debug.Log($"Level {levelIndex} freigeschaltet!");
         }
     }
 
@@ -77,6 +114,12 @@ public static class SaveSystem
                 string encryptedJson = File.ReadAllText(SAVE_PATH);
                 string json = SimpleDecrypt(encryptedJson);
                 currentSave = JsonUtility.FromJson<SaveData>(json);
+                
+                // Initialisiere Listen falls null
+                if (currentSave.levelIndexes == null) currentSave.levelIndexes = new List<int>();
+                if (currentSave.highscoreValues == null) currentSave.highscoreValues = new List<int>();
+                
+                Debug.Log($"Spielstand geladen. Highscores: {currentSave.levelIndexes.Count} Einträge");
             }
             catch (Exception e)
             {
@@ -134,6 +177,39 @@ public static class SaveSystem
         {
             File.Delete(SAVE_PATH);
             Debug.Log("Spielstand gelöscht!");
+        }
+    }
+
+    // --------------------------
+    // ZUSÄTZLICHE METHODEN
+    // --------------------------
+    public static Dictionary<int, int> GetAllHighscores()
+    {
+        LoadSaveFile();
+        return currentSave.ToDictionary();
+    }
+
+    public static void ResetLevelHighscore(int levelIndex)
+    {
+        LoadSaveFile();
+        var highscores = currentSave.ToDictionary();
+        if (highscores.ContainsKey(levelIndex))
+        {
+            highscores.Remove(levelIndex);
+            currentSave.FromDictionary(highscores);
+            SaveToFile();
+            Debug.Log($"Highscore für Level {levelIndex} zurückgesetzt");
+        }
+    }
+
+    // Debug-Methode zur Anzeige aller Highscores
+    public static void DebugPrintAllHighscores()
+    {
+        var highscores = GetAllHighscores();
+        Debug.Log("Aktuelle Highscores:");
+        foreach (var entry in highscores)
+        {
+            Debug.Log($"Level {entry.Key}: {entry.Value}");
         }
     }
 }
