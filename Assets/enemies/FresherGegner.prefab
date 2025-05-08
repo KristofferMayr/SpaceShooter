@@ -72,7 +72,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3373680636837332015}
   - component: {fileID: 7235832643953578983}
-  - component: {fileID: -505215486611832674}
   m_Layer: 0
   m_Name: FresherGegner
   m_TagString: Untagged
@@ -149,22 +148,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-505215486611832674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5728716611820876869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee7ace41f2365ff44bd5324fc8785307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
-  projectileSpeed: 12
-  minFireRate: 0.5
-  maxFireRate: 1.5
-  firePoints: []
-  muzzleFlash: {fileID: 0}
-  shootSound: {fileID: 0}
