@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Unbenannt-21_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 671
+        width: 143
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8aab15f10dd644e854078263b72f41
+      internalID: -1503437038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_1
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 672
+        width: 143
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec0103aab58d1843905c3c46f61da15
+      internalID: -1819537238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_2
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 674
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44dbec0eadbccf8468aa4dcab9cd4762
+      internalID: 1375312011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_3
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 674
+        width: 164
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886a3e4bbd1c83c4db0473e4e2497234
+      internalID: -1185814644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 503
+        width: 143
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cc342b7121e7f448633ceb7821b894
+      internalID: 498399675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_5
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 503
+        width: 144
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415fc1be5cd9e5248a70b9717ba102c1
+      internalID: -1983741802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_6
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 489
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c83d790906c2554cb53ffb4859779e3
+      internalID: -320769936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_7
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 491
+        width: 144
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2de586e7f689f4fb66ef7a47062de1
+      internalID: -1050170428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 321
+        width: 142
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b7d6da2f0f8d14a850bd2541328e66
+      internalID: -298944279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_9
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 335
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315a859e267e0de4a9a52fa7eb2a6a21
+      internalID: -805706063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unbenannt-21_10
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 158
+        width: 147
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1e2ba75057cba4b80b839702db09f2
+      internalID: -1633133168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +337,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Unbenannt-21_0: -1503437038
+      Unbenannt-21_1: -1819537238
+      Unbenannt-21_10: -1633133168
+      Unbenannt-21_2: 1375312011
+      Unbenannt-21_3: -1185814644
+      Unbenannt-21_4: 498399675
+      Unbenannt-21_5: -1983741802
+      Unbenannt-21_6: -320769936
+      Unbenannt-21_7: -1050170428
+      Unbenannt-21_8: -298944279
+      Unbenannt-21_9: -805706063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
