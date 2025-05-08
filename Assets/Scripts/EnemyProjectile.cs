@@ -2,65 +2,26 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    [Header("Settings")]
-    [SerializeField] private float speed = 10f;
+    public Transform player; // Referenz zum Spieler
+    [SerializeField] private int damage = 10;
     [SerializeField] private float lifetime = 3f;
-    [SerializeField] private int damage = 1;
-    [SerializeField] private float rotationOffset = -90f; // Konstante Drehung
-
-    private Transform player;
-    private Rigidbody2D rb;
-
-    public int getDamage(){
-        return damage;
-    }
+    [SerializeField] public int damageAmount = 1; // Menge des Schadens, der zugefügt wird
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        
-        // Finde den Spieler automatisch
         if (player == null)
         {
-            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj != null) player = playerObj.transform;
+            // Finde den Spieler automatisch, falls keine Referenz gesetzt ist
+            player = GameObject.FindGameObjectWithTag("Player").transform;
         }
-
-        if (player != null)
-        {
-            // Initiale Drehung auf -90 Grad setzen
-            transform.rotation = Quaternion.Euler(0, 0, rotationOffset);
-            
-            // Bewegung initialisieren
-            InitializeMovement();
-            Destroy(gameObject, lifetime);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void InitializeMovement()
-    {
-        Vector2 direction = (player.position - transform.position).normalized;
-        rb.velocity = direction * speed;
-
-        // Winkelberechnung mit Offset
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - rotationOffset;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        Destroy(gameObject, lifetime); // Automatische Zerstörung nach Zeit
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("HIT");
-            SpaceShip playerShip = other.GetComponent<SpaceShip>();
-            if (playerShip != null)
-            {
-                playerShip.TakeDamage(damage);
-            }
+            player.GetComponent<SpaceShip>().TakeDamage(damageAmount);
             Destroy(gameObject);
         }
     }
