@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 639353209147131577}
+  - component: {fileID: 7724042121670537867}
   m_Layer: 0
-  m_Name: Cannon
+  m_Name: RightCannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,6 +32,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3373680636837332015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7724042121670537867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66429982538054105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8582284eba2343439b6f8c38224ce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 6973783335455176963, guid: 1c8c07efba4364e4cae277d82e914f69, type: 3}
+  projectileSpeed: 10
+  fireRate: 1
+  firePoint: {fileID: 639353209147131577}
+  muzzleFlash: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!1 &1292821213123917357
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,8 +59,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7651262237838183892}
+  - component: {fileID: 6790943930132144227}
   m_Layer: 0
-  m_Name: Cannon
+  m_Name: LeftCannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,6 +82,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3373680636837332015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6790943930132144227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292821213123917357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8582284eba2343439b6f8c38224ce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 6973783335455176963, guid: 1c8c07efba4364e4cae277d82e914f69, type: 3}
+  projectileSpeed: 10
+  fireRate: 1
+  firePoint: {fileID: 7651262237838183892}
+  muzzleFlash: {fileID: 0}
+  shootSound: {fileID: 0}
 --- !u!1 &5728716611820876869
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,6 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3373680636837332015}
   - component: {fileID: 7235832643953578983}
+  - component: {fileID: 1669058722044281620}
   m_Layer: 0
   m_Name: FresherGegner
   m_TagString: Untagged
@@ -88,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 5728716611820876869}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4619155, y: -1.8995922, z: 0}
+  m_LocalPosition: {x: 4.362305, y: 0.3011896, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -148,3 +187,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1669058722044281620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5728716611820876869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b53089808323b4aabe82d8caf1d436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  retreatXPosition: 0
+  retreatSpeed: 2
+  shootingInterval: 1.5
+  cannons:
+  - {fileID: 6790943930132144227}
+  - {fileID: 7724042121670537867}
