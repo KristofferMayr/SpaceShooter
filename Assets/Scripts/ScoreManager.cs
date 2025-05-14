@@ -8,21 +8,28 @@ public class ScoreManager : MonoBehaviour
     public static event Action<int> OnScoreChanged;
     
     [Header("UI Reference")]
-    [SerializeField] private TextMeshProUGUI scoreText; // Einziges Textfeld für beide Anzeigen
+    [SerializeField] private TextMeshProUGUI scoreText;
     private EnemySpawner enemySpawner;
     private AsteroidSpawner asteroidSpawner;
+    
     private int currentScore = 0;
-    private int highscore = 0;
+    private int currentLevelHighscore = 0;
     private string playerName = "Player";
+    private int currentLevelIndex = 1; // Standardmäßig Level 1
 
     void Awake()
     {
+        if (PlayerPrefs.HasKey("CurrentLevelIndex"))
+        {
+            SetCurrentLevel(PlayerPrefs.GetInt("CurrentLevelIndex"));
+        }
+
         if (Instance == null)
         {
             Debug.Log("Load SaveGame");
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            LoadHighscore();
+            LoadLevelHighscore();
             UpdateScoreDisplay();
         }
         else
@@ -33,9 +40,17 @@ public class ScoreManager : MonoBehaviour
         asteroidSpawner = FindObjectOfType<AsteroidSpawner>();
     }
 
-    private void LoadHighscore()
+    // Setzt das aktuelle Level (sollte beim Levelstart aufgerufen werden)
+    public void SetCurrentLevel(int levelIndex)
     {
-        highscore = SaveSystem.LoadScore(out playerName);
+        currentLevelIndex = levelIndex;
+        LoadLevelHighscore();
+    }
+
+    private void LoadLevelHighscore()
+    {
+        currentLevelHighscore = SaveSystem.LoadScore(currentLevelIndex, out playerName);
+        Debug.Log(currentLevelHighscore);
         currentScore = 0;
         UpdateScoreDisplay();
     }
@@ -45,13 +60,14 @@ public class ScoreManager : MonoBehaviour
         currentScore += points;
         OnScoreChanged?.Invoke(currentScore);
         
-        if (currentScore > highscore)
+        if (currentScore > currentLevelHighscore)
         {
-            highscore = currentScore;
-            SaveSystem.SaveScore(highscore, playerName);
+            currentLevelHighscore = currentScore;
+            SaveSystem.SaveScore(currentLevelIndex, currentLevelHighscore, playerName);
         }
         
         UpdateScoreDisplay();
+        
         // Boss spawnen bei Score 100
         if (currentScore == 100 && enemySpawner != null)
         {
@@ -64,9 +80,10 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            Debug.Log("Update Score Current: " + currentScore + " High: " + highscore);
-            // Kombinierte Anzeige in einem Textfeld
-            scoreText.text = $"SCORE: <color=#FFD700>{currentScore}</color>\n" + $"BEST: <color=#FF00FF>{highscore}</color>";
+            Debug.Log($"Update Score - Level: {currentLevelIndex} Current: {currentScore} High: {currentLevelHighscore}");
+            scoreText.text = $"LEVEL: {currentLevelIndex}\n" +
+                            $"SCORE: <color=#FFD700>{currentScore}</color>\n" + 
+                            $"BEST: <color=#FF00FF>{currentLevelHighscore}</color>";
         }
     }
 
@@ -79,9 +96,15 @@ public class ScoreManager : MonoBehaviour
     public void SetPlayerName(string newName)
     {
         playerName = newName;
-        if (currentScore >= highscore)
+        if (currentScore >= currentLevelHighscore)
         {
-            SaveSystem.SaveScore(highscore, playerName);
+            SaveSystem.SaveScore(currentLevelIndex, currentLevelHighscore, playerName);
         }
+    }
+
+    // Gibt den Highscore für ein bestimmtes Level zurück (für Levelauswahl-UI etc.)
+    public int GetHighscoreForLevel(int levelIndex)
+    {
+        return SaveSystem.LoadScore(levelIndex, out _);
     }
 }

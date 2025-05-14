@@ -12,7 +12,10 @@ public class LevelManager : MonoBehaviour
     // Lädt ein Level anhand des Namens
     public void LoadLevel(string levelName)
     {
-        Debug.Log("Loading Level Scene");
+        if (int.TryParse(levelName.Replace("Level", ""), out int levelIndex))
+        {
+            PlayerPrefs.SetInt("CurrentLevelIndex", levelIndex);
+        }
         SceneManager.LoadScene(levelName);
     }
 

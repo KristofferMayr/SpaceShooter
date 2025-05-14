@@ -20,7 +20,7 @@ public class EnemySpaceship : MonoBehaviour
     private bool hasReachedRetreatPosition = false;
     private bool hasReachedMaxX = false;
     private float nextShootTime;
-    public int scoreValue = 1; // Punkte pro getötetem Gegner
+    public int scoreValue = 5; // Punkte pro getötetem Gegner
     private bool wasScored = false; // Flag, ob Punkte bereits vergeben wurden
 
     private void Start()
