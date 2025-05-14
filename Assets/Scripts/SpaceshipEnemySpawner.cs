@@ -14,4 +14,13 @@ public class SpaceshipEnemySpawner : EnemySpawner
         // Spawn mit Rotation von 90 Grad (Z-Achse)
         Instantiate(enemyPrefab, new Vector3(spawnXPosition, spawnYPosition, 0), Quaternion.Euler(0, 0, 0));
     }
+
+    public override void SpawnBoss()
+    {
+        if (bossPrefab == null || bossSpawned) return;
+        
+        bossSpawned = true;
+        Instantiate(bossPrefab, new Vector3(12.14f, 0, 0), Quaternion.Euler(0, 0, 0));
+        Debug.Log("Boss Spawned");
+    }
 }

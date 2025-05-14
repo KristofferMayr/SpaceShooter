@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
     public float difficultyRampRate = 0.1f;
 
     private float currentMaxDelay;
-    private bool bossSpawned = false; // Damit der Boss nur einmal erscheint
+    protected bool bossSpawned = false; // Damit der Boss nur einmal erscheint
 
     void Start()
     {
@@ -51,7 +51,7 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(enemyPrefab, new Vector3(spawnXPosition, spawnYPosition, 0), Quaternion.Euler(0, 0, 270));
     }
 
-    public void SpawnBoss()
+    public virtual void SpawnBoss()
     {
         if (bossPrefab == null || bossSpawned) return;
         

@@ -41,13 +41,13 @@ public class SpaceShip : MonoBehaviour
             transform.position = new Vector3(transform.position.x, 3.4f, 0);
         }
 
-        if (transform.position.x > 8f)
+        if (transform.position.x > 6f)
         {
-            transform.position = new Vector3(8f, transform.position.y, 0);
+            transform.position = new Vector3(6f, transform.position.y, 0);
         }
-        else if (transform.position.x < -8)
+        else if (transform.position.x < -6)
         {
-            transform.position = new Vector3(-8f, transform.position.y, 0);
+            transform.position = new Vector3(-6f, transform.position.y, 0);
         }
     }
 
