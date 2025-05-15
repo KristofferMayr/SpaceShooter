@@ -818,6 +818,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d9f608b4953dd4ba43ad69541cd23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashDistance: 3
+  dashDuration: 0.2
+  dashCooldown: 1
+  dashUpKey: 113
+  dashDownKey: 101
+  dashParticles: {fileID: 8864716408022402364, guid: c1a52b488e6e39d4e877ef08457cefca, type: 3}
+  dashSound: {fileID: 0}
   movmentSpeed: 5
   maxHealth: 3
   currentHealth: 0

@@ -50,7 +50,6 @@ public class ScoreManager : MonoBehaviour
     private void LoadLevelHighscore()
     {
         currentLevelHighscore = SaveSystem.LoadScore(currentLevelIndex, out playerName);
-        Debug.Log(currentLevelHighscore);
         currentScore = 0;
         UpdateScoreDisplay();
     }
@@ -69,7 +68,7 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreDisplay();
         
         // Boss spawnen bei Score 100
-        if (currentScore == 1 && enemySpawner != null)
+        if (currentScore == 100 && enemySpawner != null)
         {
             enemySpawner.SpawnBoss();
             asteroidSpawner.spawnAsteroids = false; 
