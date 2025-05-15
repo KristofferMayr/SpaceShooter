@@ -202,11 +202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  retreatXPosition: 0
+  retreatXPosition: 2
   retreatSpeed: 2
   maxXPosition: 8
   verticalSpeed: 2
-  shootingInterval: 1.5
+  shootingInterval: 5
   cannons:
   - {fileID: 1095538793546262950}
   - {fileID: 4307548143971411996}

@@ -4,7 +4,7 @@ public class EnemySpaceship : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float retreatXPosition = 6f;
+    [SerializeField] private float retreatXPosition = 2f;
     [SerializeField] private float retreatSpeed = 2f;
     [SerializeField] private float maxXPosition = 8f;
     [SerializeField] private float verticalSpeed = 2f;  // Geschwindigkeit auf der Y-Achse
@@ -13,7 +13,7 @@ public class EnemySpaceship : MonoBehaviour
     private int verticalDirection = 1;  // 1 = nach oben, -1 = nach unten
 
     [Header("Combat")]
-    [SerializeField] private float shootingInterval = 20f;
+    [SerializeField] private float shootingInterval = 5f;
     [SerializeField] private EnemyCannon[] cannons;
 
     private Transform player;
@@ -83,16 +83,13 @@ public class EnemySpaceship : MonoBehaviour
 
     private void HandleShooting()
     {
-        if (hasReachedRetreatPosition && !hasReachedMaxX)
+        if (Time.time >= nextShootTime)
         {
-            if (Time.time >= nextShootTime)
+            foreach (var cannon in cannons)
             {
-                foreach (var cannon in cannons)
-                {
-                    cannon.Shoot();
-                }
-                nextShootTime = Time.time + shootingInterval;
+                cannon.Shoot();
             }
+            nextShootTime = Time.time + shootingInterval;
         }
     }
 

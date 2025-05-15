@@ -112,8 +112,9 @@ public static class SaveSystem
             try
             {
                 string encryptedJson = File.ReadAllText(SAVE_PATH);
-                string json = SimpleDecrypt(encryptedJson);
-                currentSave = JsonUtility.FromJson<SaveData>(json);
+                //string json = SimpleDecrypt(encryptedJson);
+                //currentSave = JsonUtility.FromJson<SaveData>(json);
+                currentSave = JsonUtility.FromJson<SaveData>(encryptedJson);
                 
                 // Initialisiere Listen falls null
                 if (currentSave.levelIndexes == null) currentSave.levelIndexes = new List<int>();
@@ -139,8 +140,9 @@ public static class SaveSystem
         try
         {
             string json = JsonUtility.ToJson(currentSave);
-            string encrypted = SimpleEncrypt(json);
-            File.WriteAllText(SAVE_PATH, encrypted);
+            //string encrypted = SimpleEncrypt(json);
+            //File.WriteAllText(SAVE_PATH, encrypted);
+            File.WriteAllText(SAVE_PATH, json);
             Debug.Log($"Spielstand gespeichert unter: {SAVE_PATH}");
         }
         catch (Exception e)
@@ -152,6 +154,7 @@ public static class SaveSystem
     // --------------------------
     // ENCRYPTION
     // --------------------------
+    /*
     private static string SimpleEncrypt(string input)
     {
         char[] output = new char[input.Length];
@@ -166,6 +169,7 @@ public static class SaveSystem
     {
         return SimpleEncrypt(input);
     }
+    */
 
     // --------------------------
     // DEBUG / RESET
