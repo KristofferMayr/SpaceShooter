@@ -83,18 +83,29 @@ public class SpaceShip : MonoBehaviour
         speedY = Input.GetAxisRaw("Vertical") * movmentSpeed;
         rb.velocity = new Vector2(speedX, speedY);
 
-        // Dash-Eingabe
-        if (Input.GetKeyDown(dashUpKey) && CanDash())
+        // Dash mit WASD + Shift
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            StartCoroutine(Dash(Vector2.up));
-        }
-        else if (Input.GetKeyDown(dashDownKey) && CanDash())
-        {
-            StartCoroutine(Dash(Vector2.down));
+            if (Input.GetKeyDown(KeyCode.W) && CanDash())
+            {
+                StartCoroutine(Dash(Vector2.up));
+            }
+            else if (Input.GetKeyDown(KeyCode.S) && CanDash())
+            {
+                StartCoroutine(Dash(Vector2.down));
+            }
+            else if (Input.GetKeyDown(KeyCode.A) && CanDash())
+            {
+                StartCoroutine(Dash(Vector2.left));
+            }
+            else if (Input.GetKeyDown(KeyCode.D) && CanDash())
+            {
+                StartCoroutine(Dash(Vector2.right));
+            }
         }
 
         // Begrenze die Position des Raumschiffs innerhalb des Bildschirms
-        if (transform.position.y < -3.4)
+        if (transform.position.y < -3.4f)
         {
             transform.position = new Vector3(transform.position.x, -3.4f, 0);
         }
@@ -107,11 +118,12 @@ public class SpaceShip : MonoBehaviour
         {
             transform.position = new Vector3(6f, transform.position.y, 0);
         }
-        else if (transform.position.x < -6)
+        else if (transform.position.x < -6f)
         {
             transform.position = new Vector3(-6f, transform.position.y, 0);
         }
     }
+
 
     public void TakeDamage(int damage)
     {
