@@ -1,0 +1,1258 @@
+fileFormatVersion: 2
+guid: 423a83e343e4037449198e0a6e0b2e2a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: coolerLilaDrache_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 590
+        width: 143
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004c4ba6eb5ecc14cb440aa11c582a67
+      internalID: 1330136723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 587
+        width: 136
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16466cb059f930e40a01562ff585da03
+      internalID: 1307007879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_2
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 587
+        width: 150
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a38bb698e834543a9ff9a2ff1400e5
+      internalID: -1688364667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_3
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 589
+        width: 157
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 9, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5d47ad8c1ef914d8d1a1b6daf503c2
+      internalID: 1910295518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_4
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 589
+        width: 154
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb12f96cba70ae942b34f53c5309f664
+      internalID: -657654345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_5
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 587
+        width: 148
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763be89f52a56eb4cb4fbd9b501f9664
+      internalID: -742027145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_6
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 581
+        width: 139
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 5, z: 30, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361ea83351e01c945a9e2ff2081cdd79
+      internalID: -2110043773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_7
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 586
+        width: 139
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c52ae20f2d0c64fb503cea4866451a
+      internalID: 1545638208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 449
+        width: 140
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf471130920d5940ad72d8be50bd2f0
+      internalID: 1440028068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_9
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 440
+        width: 152
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61e42aaed2826841b2f3167ab8f9b47
+      internalID: -917773912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_10
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 437
+        width: 143
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c887f6e1a1ebdde47b985f9b5805a826
+      internalID: -1404693600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_11
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 450
+        width: 139
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57111a34f4c3fb34a8afc84b5db25ce6
+      internalID: 268029289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_12
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 446
+        width: 140
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83cccae360a00e42941e0aef3c9e843
+      internalID: 1499133516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_13
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 447
+        width: 147
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de3664cb6f685e4787bd2038ae69029
+      internalID: 1442387213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_14
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 439
+        width: 149
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45014677ce1497a4d9d80b145377f08a
+      internalID: -769070684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_15
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 450
+        width: 139
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3231946585640914ca45816b1afbee7e
+      internalID: -621852526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_16
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 262
+        width: 308
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a435f88c8b5d8b409ec1d3f87a5ce4f
+      internalID: -1686198617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_17
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 264
+        width: 292
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122de849dab96c448993419e5ed237cf
+      internalID: -94370851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_18
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 265
+        width: 283
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbea7509b15e1064fa706d9a38a33e36
+      internalID: -1642197508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_19
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 110
+        width: 142
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183fa8410ecf14246bd1dec6ab1a0ddf
+      internalID: -1828097783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_20
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 301
+        width: 8
+        height: 17
+      alignment: 9
+      pivot: {x: 1.240902, y: 0.064174876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6119a6f1be1cd2f41a3e398be64a3b16
+      internalID: 111309438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_21
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 121
+        width: 139
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065bf7e854453e84eab2aee2dea05673
+      internalID: -308801682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_22
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 188
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bbfb4f1ee91df4581ba38052d01872
+      internalID: -97725726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_23
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 127
+        width: 141
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1e867abe75deb4fb3eccc3dc08c4e2
+      internalID: -84842668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_24
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 128
+        width: 134
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44222c88e8f26644cb96d1daa18ad985
+      internalID: -1115243604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_25
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 123
+        width: 134
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19de1936dff5a174295e15e2a1f43252
+      internalID: -1508802416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_26
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 109
+        width: 142
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b4d2d3c9f78bd41b7d3a5b785f7ed7
+      internalID: 2024794253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_27
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 180
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15728bd6c68d20240881f8210222fc94
+      internalID: -300571207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_28
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 173
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff7375bf7798d94b868f42ade00443a
+      internalID: -1234547416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_29
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 9
+        width: 114
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57a2cba941d6e847ad3f06275b295b8
+      internalID: 322070130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_30
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 33
+        width: 113
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de22441f10939fd4e8c43e5d209ff42e
+      internalID: 549932332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_31
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 50
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f16d1f42299e5b46a6bde9e5146c17d
+      internalID: 809711133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_32
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 75
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84a9fa5e3cb182489d1670c842c6331
+      internalID: -877768244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_33
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 16
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10a3220578e1b247b75c283a294c454
+      internalID: -310350149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_34
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 52
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92d8abb9e8745247bda74de71fd9b8d
+      internalID: 1307433302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_35
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 9
+        width: 109
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704b26e21cf74b147b7d9bfe1ec5cfa0
+      internalID: -1046212160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_36
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 28
+        width: 41
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b109c69fc8739ad4493a09c233d41355
+      internalID: 1949354612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_37
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 28
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbdb4d7a4d093b147ac5122ac6a0e282
+      internalID: 1959292420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_38
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 28
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f3a3f7f8d07e746870cadc71f27c72
+      internalID: 615353259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_39
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 29
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6cc350b39439cf4abbb21a2cf01daca
+      internalID: -114646604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_40
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 28
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2fc5cf89328a4469c8a0f1e6b7ec50
+      internalID: -1156890574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_41
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 28
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0e47877de440f4ca0767ed399b1cfb
+      internalID: -860831584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_42
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 28
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c3961424466e645b0172cb1b94d11b
+      internalID: -991171704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_43
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 43
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f060d4c2bbd6f4b851b962e0064ff3
+      internalID: -1220074794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_44
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 30
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f087ce84b231524cbadf76e11598dbd
+      internalID: 802595117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_45
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 30
+        width: 44
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b012dff49208bd64faef501d0f80c88a
+      internalID: 398385725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_46
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 30
+        width: 45
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7311ed69841b28448393fdd03332443
+      internalID: -134224958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_47
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 34
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4204e9100d24b46ad1d3125fc502af
+      internalID: -591973255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_48
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 34
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b052bed93012d44aa565af8b04b5fb
+      internalID: -134738120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_49
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 287
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa137a6ef555dbb49a7c1f8560f009fe
+      internalID: 982708199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_50
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 17
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e448a672a65ca2e48b4f07e844e3fa1c
+      internalID: 714912256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coolerLilaDrache_51
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 20
+        width: 58
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0fe67b182280f4484b6b4b17faf36b
+      internalID: 1155935429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      coolerLilaDrache_0: 1330136723
+      coolerLilaDrache_1: 1307007879
+      coolerLilaDrache_10: -1404693600
+      coolerLilaDrache_11: 268029289
+      coolerLilaDrache_12: 1499133516
+      coolerLilaDrache_13: 1442387213
+      coolerLilaDrache_14: -769070684
+      coolerLilaDrache_15: -621852526
+      coolerLilaDrache_16: -1686198617
+      coolerLilaDrache_17: -94370851
+      coolerLilaDrache_18: -1642197508
+      coolerLilaDrache_19: -1828097783
+      coolerLilaDrache_2: -1688364667
+      coolerLilaDrache_20: 111309438
+      coolerLilaDrache_21: -308801682
+      coolerLilaDrache_22: -97725726
+      coolerLilaDrache_23: -84842668
+      coolerLilaDrache_24: -1115243604
+      coolerLilaDrache_25: -1508802416
+      coolerLilaDrache_26: 2024794253
+      coolerLilaDrache_27: -300571207
+      coolerLilaDrache_28: -1234547416
+      coolerLilaDrache_29: 322070130
+      coolerLilaDrache_3: 1910295518
+      coolerLilaDrache_30: 549932332
+      coolerLilaDrache_31: 809711133
+      coolerLilaDrache_32: -877768244
+      coolerLilaDrache_33: -310350149
+      coolerLilaDrache_34: 1307433302
+      coolerLilaDrache_35: -1046212160
+      coolerLilaDrache_36: 1949354612
+      coolerLilaDrache_37: 1959292420
+      coolerLilaDrache_38: 615353259
+      coolerLilaDrache_39: -114646604
+      coolerLilaDrache_4: -657654345
+      coolerLilaDrache_40: -1156890574
+      coolerLilaDrache_41: -860831584
+      coolerLilaDrache_42: -991171704
+      coolerLilaDrache_43: -1220074794
+      coolerLilaDrache_44: 802595117
+      coolerLilaDrache_45: 398385725
+      coolerLilaDrache_46: -134224958
+      coolerLilaDrache_47: -591973255
+      coolerLilaDrache_48: -134738120
+      coolerLilaDrache_49: 982708199
+      coolerLilaDrache_5: -742027145
+      coolerLilaDrache_50: 714912256
+      coolerLilaDrache_51: 1155935429
+      coolerLilaDrache_6: -2110043773
+      coolerLilaDrache_7: 1545638208
+      coolerLilaDrache_8: 1440028068
+      coolerLilaDrache_9: -917773912
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
