@@ -3,6 +3,19 @@ using UnityEngine;
 
 public class SpaceShip : MonoBehaviour
 {
+    [Header("Dash Settings")]
+    [SerializeField] private float dashDistance = 3f;
+    [SerializeField] private float dashDuration = 0.2f;
+    [SerializeField] private float dashCooldown = 1f;
+    [SerializeField] private KeyCode dashUpKey = KeyCode.Q;
+    [SerializeField] private KeyCode dashDownKey = KeyCode.E;
+    
+    [Header("VFX")]
+    [SerializeField] private ParticleSystem dashParticles;
+    [SerializeField] private AudioClip dashSound;
+    private bool isDashing = false;
+    private float lastDashTime;
+    private AudioSource audioSource;
     public float movmentSpeed = 5; // Geschwindigkeit der Raumschiffbewegung
     private float speedX, speedY;
     private Rigidbody2D rb;
@@ -21,6 +34,45 @@ public class SpaceShip : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth; // Setze die Lebenspunkte auf das Maximum
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private bool CanDash()
+    {
+        return !isDashing && Time.time > lastDashTime + dashCooldown;
+    }
+
+    private IEnumerator Dash(Vector2 direction)
+    {
+        isDashing = true;
+        lastDashTime = Time.time;
+
+        // Effekte starten
+        if (dashParticles != null) Instantiate(dashParticles, this.transform.position, Quaternion.identity);;
+        if (dashSound != null) audioSource.PlayOneShot(dashSound);
+
+        // Originalposition speichern
+        Vector2 startPos = transform.position;
+        Vector2 endPos = startPos + direction * dashDistance;
+
+        // Kollision während Dash deaktivieren
+        GetComponent<Collider2D>().enabled = false;
+
+        // Dash-Bewegung
+        float elapsed = 0f;
+        while (elapsed < dashDuration)
+        {
+            transform.position = Vector2.Lerp(startPos, endPos, elapsed / dashDuration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        // Finale Position setzen
+        transform.position = endPos;
+
+        // Kollision wieder aktivieren
+        GetComponent<Collider2D>().enabled = true;
+        isDashing = false;
     }
 
     // Update is called once per frame
@@ -30,6 +82,16 @@ public class SpaceShip : MonoBehaviour
         speedX = Input.GetAxisRaw("Horizontal") * movmentSpeed;
         speedY = Input.GetAxisRaw("Vertical") * movmentSpeed;
         rb.velocity = new Vector2(speedX, speedY);
+
+        // Dash-Eingabe
+        if (Input.GetKeyDown(dashUpKey) && CanDash())
+        {
+            StartCoroutine(Dash(Vector2.up));
+        }
+        else if (Input.GetKeyDown(dashDownKey) && CanDash())
+        {
+            StartCoroutine(Dash(Vector2.down));
+        }
 
         // Begrenze die Position des Raumschiffs innerhalb des Bildschirms
         if (transform.position.y < -3.4)
@@ -87,7 +149,8 @@ public class SpaceShip : MonoBehaviour
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false; //im editor
         #else
-            Application.Quit(); //im build
+            PauseMenuUI pauseMenuUI = GetComponent<PauseMenuUI>();
+            pauseMenuUI.LoadOtherLevel();
         #endif
     }
 
