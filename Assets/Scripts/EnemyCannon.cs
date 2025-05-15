@@ -5,14 +5,14 @@ public class EnemyCannon : MonoBehaviour
     [Header("Projectile Settings")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed = 10f;
-    [SerializeField] private float fireRate = 1f;
+    [SerializeField] protected float fireRate = 1f;
     [SerializeField] private Transform firePoint; // Wo das Projektil spawnen soll
 
     [Header("Visual Feedback")]
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private AudioClip shootSound;
 
-    private float nextFireTime;
+    protected float nextFireTime;
     private AudioSource audioSource;
 
     private void Start()
@@ -21,7 +21,7 @@ public class EnemyCannon : MonoBehaviour
         if (firePoint == null) firePoint = transform; // Fallback
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (Time.time >= nextFireTime)
         {

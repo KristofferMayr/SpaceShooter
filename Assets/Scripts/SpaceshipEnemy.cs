@@ -13,7 +13,7 @@ public class EnemySpaceship : MonoBehaviour
     private int verticalDirection = 1;  // 1 = nach oben, -1 = nach unten
 
     [Header("Combat")]
-    [SerializeField] private float shootingInterval = 5f;
+    [SerializeField] private float shootingInterval = 20f;
     [SerializeField] private EnemyCannon[] cannons;
 
     private Transform player;
