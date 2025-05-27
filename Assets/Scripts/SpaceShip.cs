@@ -9,32 +9,74 @@ public class SpaceShip : MonoBehaviour
     [SerializeField] private float dashCooldown = 1f;
     [SerializeField] private KeyCode dashUpKey = KeyCode.Q;
     [SerializeField] private KeyCode dashDownKey = KeyCode.E;
-    
+
     [Header("VFX")]
     [SerializeField] private ParticleSystem dashParticles;
     [SerializeField] private AudioClip dashSound;
+
+    [Header("Weapons")]
+    [SerializeField] private Transform[] weaponMountPoints; // Mount-Punkte für jede Waffe
+    [SerializeField] private GameObject[] weaponPrefabs; // Waffen-Prefabs
+    private int currentWeaponIndex = 0;
+    private GameObject currentWeapon;
+
     private bool isDashing = false;
     private float lastDashTime;
     private AudioSource audioSource;
-    public float movmentSpeed = 5; // Geschwindigkeit der Raumschiffbewegung
+    public float movmentSpeed = 5;
     private float speedX, speedY;
     private Rigidbody2D rb;
 
-    // Lebenssystem
     public int maxHealth = 3;
     public int currentHealth;
     private bool isInvincible = false;
-    public float invincibilityDuration = 2.0f; // Dauer der Unsterblichkeit nach einem Treffer
+    public float invincibilityDuration = 2.0f;
 
-    // Animation
     public Animator animator;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth; // Setze die Lebenspunkte auf das Maximum
+        currentHealth = maxHealth;
         audioSource = GetComponent<AudioSource>();
+
+        EquipWeapon(currentWeaponIndex); // Starte mit erster Waffe
+    }
+
+    void Update()
+    {
+        // Bewegung
+        speedX = Input.GetAxisRaw("Horizontal") * movmentSpeed;
+        speedY = Input.GetAxisRaw("Vertical") * movmentSpeed;
+        rb.velocity = new Vector2(speedX, speedY);
+
+        // Dash
+        if (Input.GetKeyDown(dashUpKey) && CanDash())
+        {
+            StartCoroutine(Dash(Vector2.up));
+        }
+        else if (Input.GetKeyDown(dashDownKey) && CanDash())
+        {
+            StartCoroutine(Dash(Vector2.down));
+        }
+
+        // Bildschirmgrenzen
+        Vector3 pos = transform.position;
+        pos.y = Mathf.Clamp(pos.y, -3.4f, 3.4f);
+        pos.x = Mathf.Clamp(pos.x, -6f, 6f);
+        transform.position = pos;
+
+        // Waffenwechsel
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            currentWeaponIndex = (currentWeaponIndex + 1) % weaponPrefabs.Length;
+            EquipWeapon(currentWeaponIndex);
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            currentWeaponIndex = (currentWeaponIndex - 1 + weaponPrefabs.Length) % weaponPrefabs.Length;
+            EquipWeapon(currentWeaponIndex);
+        }
     }
 
     private bool CanDash()
@@ -47,18 +89,14 @@ public class SpaceShip : MonoBehaviour
         isDashing = true;
         lastDashTime = Time.time;
 
-        // Effekte starten
-        if (dashParticles != null) Instantiate(dashParticles, this.transform.position, Quaternion.identity);;
+        if (dashParticles != null) Instantiate(dashParticles, transform.position, Quaternion.identity);
         if (dashSound != null) audioSource.PlayOneShot(dashSound);
 
-        // Originalposition speichern
         Vector2 startPos = transform.position;
         Vector2 endPos = startPos + direction * dashDistance;
 
-        // Kollision während Dash deaktivieren
         GetComponent<Collider2D>().enabled = false;
 
-        // Dash-Bewegung
         float elapsed = 0f;
         while (elapsed < dashDuration)
         {
@@ -67,60 +105,32 @@ public class SpaceShip : MonoBehaviour
             yield return null;
         }
 
-        // Finale Position setzen
         transform.position = endPos;
 
-        // Kollision wieder aktivieren
         GetComponent<Collider2D>().enabled = true;
         isDashing = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void EquipWeapon(int index)
     {
-        // Bewegung des Raumschiffs
-        speedX = Input.GetAxisRaw("Horizontal") * movmentSpeed;
-        speedY = Input.GetAxisRaw("Vertical") * movmentSpeed;
-        rb.velocity = new Vector2(speedX, speedY);
-
-        // Dash-Eingabe
-        if (Input.GetKeyDown(dashUpKey) && CanDash())
+        if (currentWeapon != null)
         {
-            StartCoroutine(Dash(Vector2.up));
-        }
-        else if (Input.GetKeyDown(dashDownKey) && CanDash())
-        {
-            StartCoroutine(Dash(Vector2.down));
+            Destroy(currentWeapon);
         }
 
-        // Begrenze die Position des Raumschiffs innerhalb des Bildschirms
-        if (transform.position.y < -3.4)
-        {
-            transform.position = new Vector3(transform.position.x, -3.4f, 0);
-        }
-        else if (transform.position.y > 3.4f)
-        {
-            transform.position = new Vector3(transform.position.x, 3.4f, 0);
-        }
+        // Mount-Punkt für diese Waffe nutzen, falls vorhanden
+        Transform mountPoint = (weaponMountPoints.Length > index) ? weaponMountPoints[index] : transform;
 
-        if (transform.position.x > 6f)
-        {
-            transform.position = new Vector3(6f, transform.position.y, 0);
-        }
-        else if (transform.position.x < -6)
-        {
-            transform.position = new Vector3(-6f, transform.position.y, 0);
-        }
+        currentWeapon = Instantiate(weaponPrefabs[index], mountPoint.position, mountPoint.rotation, mountPoint);
     }
 
     public void TakeDamage(int damage)
     {
-        if (isInvincible) return; // Ignoriere Schaden wenn unsterblich
+        if (isInvincible) return;
 
         currentHealth -= damage;
         Debug.Log("Spaceship took damage! Current health: " + currentHealth);
 
-        // Aktiviere Unsterblichkeit für die angegebene Dauer
         StartCoroutine(InvincibilityCooldown());
 
         if (currentHealth == 0)
@@ -129,7 +139,6 @@ public class SpaceShip : MonoBehaviour
         }
     }
 
-    // Coroutine für die Unsterblichkeitsphase
     private IEnumerator InvincibilityCooldown()
     {
         isInvincible = true;
@@ -140,38 +149,29 @@ public class SpaceShip : MonoBehaviour
     public void Die()
     {
         Debug.Log("Spaceship destroyed!");
-
-        //TODO: Game-Over-Logik implementieren -> Restart, Level-Overview usw.
         animator.SetBool("dead", true);
         StartCoroutine(WaitForAnimation());
 
-        // Application Quit funktioniert nur im build deshalb: (# um während kompilierungszeit ausgwertet zu werden)
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false; //im editor
-        #else
-            PauseMenuUI pauseMenuUI = GetComponent<PauseMenuUI>();
-            pauseMenuUI.LoadOtherLevel();
-        #endif
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        PauseMenuUI pauseMenuUI = GetComponent<PauseMenuUI>();
+        pauseMenuUI.LoadOtherLevel();
+#endif
     }
 
     private IEnumerator WaitForAnimation()
     {
-        Debug.Log("WAIT ANIMATION");
-        // Warte für eine bestimmte Zeit, um die Animation abzuspielen
         yield return new WaitForSeconds(5.0f);
-        
-        // Zerstöre das Spielobjekt nach der Animation
         Destroy(gameObject);
     }
 
-    // Kollisionsbehandlung
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Trigger entered with: " + collision.name);
 
         if (collision.CompareTag("Asteroid"))
         {
-            Debug.Log("Asteroid hit!");
             Asteroid asteroid = collision.GetComponent<Asteroid>();
             if (asteroid != null)
             {
