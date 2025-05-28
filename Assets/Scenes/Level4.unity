@@ -924,6 +924,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d9f608b4953dd4ba43ad69541cd23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashDistance: 3
+  dashDuration: 0.2
+  dashCooldown: 1
+  dashUpKey: 113
+  dashDownKey: 101
+  dashParticles: {fileID: 0}
+  dashSound: {fileID: 0}
   movmentSpeed: 5
   maxHealth: 3
   currentHealth: 0
@@ -1585,8 +1592,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 5728716611820876869, guid: a91cc8ce32ae38941a0e0aef238277ac, type: 3}
-  bossPrefab: {fileID: 647307163139854588, guid: 7002ac367baead94f843dc6212b3cd1b, type: 3}
+  - {fileID: 5728716611820876869, guid: d95bb9508bda92c45a7973bd3ca9085b, type: 3}
+  bossPrefab: {fileID: 647307163139854588, guid: 187abd6b89c805c4bbc6b1fe987de5d4, type: 3}
   minSpawnDelay: 2
   maxSpawnDelay: 4
   minYSpawn: -3
