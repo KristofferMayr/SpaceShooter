@@ -200,7 +200,7 @@ MonoBehaviour:
   damageAmount: 1
   scoreValue: 10
   powerUpPrefabs: []
-  maxHealth: 3
+  maxHealth: 5
   projectilePrefab: {fileID: 3666759061275594267, guid: 1c8c07efba4364e4cae277d82e914f69, type: 3}
   firePoint: {fileID: 5055169179899054819}
   shootingInterval: 2

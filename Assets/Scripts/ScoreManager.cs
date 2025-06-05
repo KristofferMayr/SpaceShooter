@@ -69,7 +69,7 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreDisplay();
         
         // Boss spawnen bei Score 100
-        if (currentScore == 1 && enemySpawner != null)
+        if (currentScore >= 1 && enemySpawner != null)
         {
             enemySpawner.SpawnBoss();
             asteroidSpawner.spawnAsteroids = false; 
